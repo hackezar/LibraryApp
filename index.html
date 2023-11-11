@@ -10,22 +10,29 @@
 <body>
     <div class="header">
         <h1>Library</h1>
-        <button class="newBookBtn">NEW BOOK</button>
+        <button class="newBookBtn">New Book</button>
+        <img src="icons/paul-melki-bByhWydZLW0-unsplash.jpg">
     </div>
     
     <div class="container">
         
     </div>
 
+    <div class="footer">
+        <p id="footer-name">Made By Jack Halcisak </p>
+        <p id="footer-email">jackhalcisak@outlook.com</p>
+    </div>
+
     <dialog id="newBookDialog">
+
         <form id="newBookForm" method="dialog">
+            <button id="formCancel"><img src="icons/close_FILL0_wght400_GRAD0_opsz24.svg"></button>
             <ul>
-                <button>X</button>
                 <li>
-                    <label>Title: <input type="text" id="bookTitle" placeholder="ex: The Cat In The Hat"></label>
+                    <label>Title: <input type="text" name="bookTitle" id="bookTitle" placeholder="ex: The Cat In The Hat" required></label>
                 </li>
                 <li>
-                    <label>Author: <input type="text" name="bookAuthor" id="bookAuthor" placeholder="ex: Doctor Seuss"></label>
+                    <label>Author: <input type="text" name="bookAuthor" id="bookAuthor" placeholder="ex: Doctor Seuss" required></label>
                 </li>
                 <li>
                     <label>Page Length: <input type="tel" name="bookPages" id="bookPages" placeholder="ex: 96"></label>
@@ -35,8 +42,8 @@
                 </li>
                 <li>
                     <label for="yes_no_radio">Did you read this book?</label>
-                    <input type="radio" id="bookRead" name="yes_no_radio" value="yes">Yes</input>
-                    <input type="radio" id="bookRead" name="yes_no_radio" value="no">No</input>
+                    <input type="radio" id="bookRead" name="yes_no_radio" value="true" required>Yes</input>
+                    <input type="radio" id="bookRead" name="yes_no_radio" value="false">No</input>
                 </li>
             </ul>
             <button id="submitBtn">Submit</button>
