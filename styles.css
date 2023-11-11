@@ -4,6 +4,7 @@ src: url('fonts/PTSerif-Regular.ttf'); }
 /*variables */
 :root{
     --accentColor: #9F0000;
+    --shadow: 0 1px 6px rgba(0, 0, 0, 0.12), 0 1px 4px rgba(0, 0, 0, 0.24);
     }
 
 body{
@@ -38,6 +39,7 @@ body{
     width: 12vw;
     height: 5vh;
     font-size: 2vh;
+    box-shadow: var(--shadow);
 }
 
 .header img {
@@ -83,28 +85,30 @@ body{
     transition: all 0.2s;
     color: #FFFFFF;
     cursor: pointer;
+    box-shadow: var(--shadow);
 }
 
 .book button:hover, .newBookBtn:hover, #submitBtn:hover{
     color: #000000;
     background-color: #FFFFFF;
     cursor: pointer;
+    box-shadow: var(--shadow);
 }
 
 .container {
     margin-top: 1rem;
-    border: 1px solid red;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    padding: 0 1rem;
 
 }
 
 .book {
-    border: 1px solid black;
+    border: 3px solid black;
     margin: 0.2rem 0 0.2rem 0.2rem;
     padding: 1rem;
-    font-size: max(1.5vw, 1.5vh)
-
+    font-size: max(1.5vw, 1.5vh);
+    box-shadow: var(--shadow);
 }
 
 #newBookDialog {
@@ -125,6 +129,7 @@ body{
     cursor: pointer;
     margin: 0;
     padding: 0;
+    box-shadow: var(--shadow);
 }
 
 .readBtn {
