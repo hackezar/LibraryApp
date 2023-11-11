@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="header">
+        <h1>Library</h1>
+        <button class="newBookBtn">NEW BOOK</button>
+    </div>
+    
+    <div class="container">
+        
+    </div>
+
+    <dialog id="newBookDialog">
+        <form id="newBookForm" method="dialog">
+            <ul>
+                <button>X</button>
+                <li>
+                    <label>Title: <input type="text" id="bookTitle" placeholder="ex: The Cat In The Hat"></label>
+                </li>
+                <li>
+                    <label>Author: <input type="text" name="bookAuthor" id="bookAuthor" placeholder="ex: Doctor Seuss"></label>
+                </li>
+                <li>
+                    <label>Page Length: <input type="tel" name="bookPages" id="bookPages" placeholder="ex: 96"></label>
+                </li>
+                <li>
+                    <label>Year Published: <input type="tel" name="bookYear" id="bookYear" placeholder="ex: 1500"></label>
+                </li>
+                <li>
+                    <label for="yes_no_radio">Did you read this book?</label>
+                    <input type="radio" id="bookRead" name="yes_no_radio" value="yes">Yes</input>
+                    <input type="radio" id="bookRead" name="yes_no_radio" value="no">No</input>
+                </li>
+            </ul>
+            <button id="submitBtn">Submit</button>
+        </form>
+    </dialog>
+
+    <script src="script.js"></script>
+</body>
+</html>
