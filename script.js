@@ -1,5 +1,6 @@
 const myLibrary = [];
 
+/*
 function Book(title, author, pages, yearPublished, read) {
   // the constructor...
   this.title = title;
@@ -9,25 +10,50 @@ function Book(title, author, pages, yearPublished, read) {
   this.read = read;
   addBookToLibrary(this);
 }
+*/
 
-function addBookToLibrary (book) {
-  // adds the book that was created from the constructor to the library
-  myLibrary.push(book);
+class Book {
+  // The Constructor
+  constructor (title, author, pages, yearPublished, read) {
+    this.title = title;
+    this.author = author;
+    this.pages = pages;
+    this.yearPublished = yearPublished;
+    this.read = read;
+    }
+
+    addBookToLibrary() {
+      myLibrary.push(this)
+    }
 }
+
+
 
 //self adding some books to the library
 const book1 = new Book("Atlas Shrugged", "Ayn Rand", 1168, 1957, "true");
+book1.addBookToLibrary();
 const book2 = new Book("The Dark Tower I: The Gunslinger", "Stephen King", 384, 2016, "true");
+book2.addBookToLibrary();
 const book3 = new Book("Tubes: A Journey to the Center of the Internet","Andrew Blume", 304, 2013, "true");
+book3.addBookToLibrary();
 const book4 = new Book("Chaos: Charles Manson, the CIA, and the Secret History of the Sixties", "Tom O'Neil", 528, 2019, "true");
+book4.addBookToLibrary();
 const book5 = new Book("The Sacred Mushroom and the Cross", "John M. Allegro", 253, 1970, "false");
+book5.addBookToLibrary();
 const book6 = new Book("The Expanse: Leviathan Wakes", "James S.A. Corey", 592, 2011, "true");
+book6.addBookToLibrary();
 const book7 = new Book("1984", "George Orwell", 328, 1949, "true");
+book7.addBookToLibrary();
 const book8 = new Book("Brave New World", "Aldous Huxley", 311, 1932, "true");
+book8.addBookToLibrary();
 const book9 = new Book("The Art of War", "Sun Tzu", 68, -500, "false");
+book9.addBookToLibrary();
 const book10 = new Book("The Anarchist Handbook", "Michael Malice", 365, 2021, "true");
+book10.addBookToLibrary();
 const book11 = new Book("Dune", "Frank Herbert", 896, 1965, "true");
+book11.addBookToLibrary();
 const book12 = new Book("How to Win at the Sport of Business", "Mark Cuban", 84, 2013, "true");
+book12.addBookToLibrary();
 
 
 //Loops through the array and displays each book on the page
@@ -139,9 +165,8 @@ submitBtn.addEventListener("click", function () {
     let pagesInput = document.getElementById("bookPages").value;
     let yearInput = document.getElementById("bookYear").value;
     let readInput = document.querySelector('input[name="yes_no_radio"]:checked').value;
-    console.log(readInput)
     if (titleInput != "" && authorInput != "" ) {
-    new Book(titleInput, authorInput, pagesInput, yearInput, readInput);
+    new Book(titleInput, authorInput, pagesInput, yearInput, readInput).addBookToLibrary;
     updateLibrary();
     document.getElementById("newBookForm").reset();
     //closes the form
